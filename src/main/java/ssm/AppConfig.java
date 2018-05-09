@@ -27,9 +27,9 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @Configuration 
 @ComponentScan(basePackages = "ssm") 
 @EnableWebMvc
-@PropertySource("classpath:jdbc.properties")
+@PropertySource({"classpath:jdbc.properties"})
 @MapperScan("ssm.dao.mapper") // 扫描此包下的所有mapper接口并注册实现bean
-@EnableTransactionManagement
+@EnableTransactionManagement 
 public class AppConfig extends WebMvcConfigurerAdapter {
 
 	@Override
@@ -45,7 +45,7 @@ public class AppConfig extends WebMvcConfigurerAdapter {
 		String url = env.getProperty("jdbc.url");
 		String username = env.getProperty("jdbc.username");
 		String password = env.getProperty("jdbc.password");
-		String driverClass = env.getProperty("jdbc.driverClass");
+		String driverClass = env.getProperty("jdbc.driver");
 		
 		DriverManagerDataSource ds = new DriverManagerDataSource(url, username, password);
 		ds.setDriverClassName(driverClass);
