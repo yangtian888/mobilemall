@@ -13,8 +13,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 @EnableGlobalMethodSecurity(prePostEnabled = true) // 开启service接口方法上应用@PreAuthorize支持
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	
-	@Autowired // 注入的是我们自定义的UserServiceImpl @Service
-	private UserDetailsService userService;
+//	@Autowired // 注入的是我们自定义的UserServiceImpl @Service
+//	private UserDetailsService userService;
 	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
@@ -31,8 +31,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			
 			.and()
 			
-			.rememberMe() // 记住我配置
-			.tokenValiditySeconds(3 * 24 * 3600) // 有效期3天
-			.userDetailsService(userService);
+//			.rememberMe() // 记住我配置
+//			.tokenValiditySeconds(3 * 24 * 3600) // 有效期3天
+//			.userDetailsService(userService)
+			;
 	}
 }

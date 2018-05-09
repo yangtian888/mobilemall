@@ -5,6 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import ssm.entity.User;
 import ssm.service.UserService;
@@ -13,15 +14,12 @@ import ssm.service.UserService;
 public class UserController {
 	
 private UserService userService;
-	@Autowired
-	public UserController(UserService userService) {
-	this.userService = userService;
-	}
 
 @RequestMapping(method=RequestMethod.GET,value="/login")
-public String details(Model model){ 
-	//User user = userService.findOne(id);
-	//model.addAttribute("user",user);
+public String login(@RequestParam(required = false) String error){ 
+	if (error != null) {
+		System.out.println("登录失败");
+	}
 	return "login";
 }
 	
