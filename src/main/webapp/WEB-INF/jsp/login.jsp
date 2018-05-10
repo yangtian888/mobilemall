@@ -1,20 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
     <c:set var="contextPath" value="${pageContext.request.contextPath }"></c:set>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>login</title>
 <link type="text/css" href="${contextPath}/assets/css/css.css" rel="stylesheet" />
 <script type="text/javascript" src="${contextPath}/assets/js/jquery.js"></script>
 <script type="text/javascript" src="${contextPath}/assets/js/js.js"></script>
 </head>
 <body>
 <div class="hrader" id="header">
-  <a href="login.html" style="color:#FD7306;margin-left:20px;">请登录</a> 
-  <a href="reg.html">注册</a>
+  <a href="login.jsp" style="color:#FD7306;margin-left:20px;">请登录</a> 
+  <a href="reg">注册</a>
   <div class="topNav">
    <a href="index.html" style="color:#FD7306;">首页</a>
    <a href="buy.html">买家</a>
@@ -37,11 +37,12 @@
     <img src="${contextPath}/assets/images/login.jpg" width="567" height="348" />
    </div><!--loginLeft/-->
    <div class="loginRight">
-    <form class="login" action="#" method="get">
+    <form class="login" action="${contextPath}/login" method="post">
+    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
      <label>邮箱/用户名/已验证手机</label>
-     <input type="text" class="loginName" />
+     <input type="text" class="loginName" name ="username"/>
      <label>密码</label>
-     <input type="password" class="loginPwd" />
+     <input type="password" class="loginPwd" name="password"/>
      <div class="jizhu">
       <input type="checkbox" /> 一周内免登陆 <a href="#">忘记密码</a>
      </div><!--jizhu/-->

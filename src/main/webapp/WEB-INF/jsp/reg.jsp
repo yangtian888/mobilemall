@@ -1,13 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>  
+    <c:set var="contextPath" value="${pageContext.request.contextPath}"></c:set>  
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-<link type="text/css" href="css/css.css" rel="stylesheet" />
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/js.js"></script>
+<title>reg</title>
+<link type="text/css" href="${contextPath}/assets/css/css.css" rel="stylesheet" />
+<script type="text/javascript" src="${contextPath}/assets/js/jquery.js"></script>
+<script type="text/javascript" src="${contextPath}/assets/js/js.js"></script>
 </head>
 <body>
 <div class="hrader" id="header">
@@ -28,7 +30,7 @@
  </div><!--hrader/-->
  <div class="mainCont">
   <h1 class="logo" style="text-align:left;">
-  <a href="index.html"><img src="images/logo.png" width="304" height="74" /></a>
+  <a href="index.html"><img src="${contextPath}/assets/images/logo.png" width="304" height="74" /></a>
   </h1>
   <div class="loginBuy">
   <div class="loginBuyLeft">
@@ -37,10 +39,10 @@
     <li class="regEqBg2">采购商</li>
     <div class="clears"></div>
    </ul><!--regEq/-->
-   <form action="#" method="get" class="regForm">
+   <form action="${contextPath}/reg" method="post" class="reg">
     <div class="loginBuyList">
-     <label for="name">用户名：</label>
-     <input type="text" id="name" />
+     <label for="username">用户名：</label>
+     <input type="text" id="username" />
     </div><!--loginBuyList/-->
     <div class="loginBuyList">
      <label for="email">邮箱：</label>
@@ -51,8 +53,8 @@
      <input type="text" id="tel" />
     </div><!--loginBuyList/-->
     <div class="loginBuyList">
-     <label for="pwd">设置密码：</label>
-     <input type="text" id="pwd" />
+     <label for="password">设置密码：</label>
+     <input type="text" id="password" />
     </div><!--loginBuyList/-->
     <div class="loginBuyList" style="border:#DEDEDE 1px solid;">
      <label for="pwd1">确认密码：</label>
@@ -63,7 +65,7 @@
      <label for="yanzheng">验证码：</label>
      <input type="text" id="yanzheng" />
      <div class="yanzhengma">
-      <img src="images/yanzheng.jpg" width="124" height="52" />
+      <img src="${contextPath}/assets/images/yanzheng.jpg" width="124" height="52" />
       <span>换一张</span>
      </div>
     </div><!--loginBuyList/-->
@@ -101,7 +103,7 @@
      <label for="yanzheng">验证码：</label>
      <input type="text" id="yanzheng" />
      <div class="yanzhengma">
-      <img src="images/yanzheng.jpg" width="124" height="52" />
+      <img src="${contextPath}/assets/images/yanzheng.jpg" width="124" height="52" />
       <span>换一张</span>
      </div>
     </div><!--loginBuyList/-->
@@ -115,11 +117,11 @@
   </div><!--loginBuyLeft-->
   <div class="loginBuyRight">
    <div class="regDl">
-    <a href="login.html"><img src="images/dl.jpg" width="180" height="60" /></a>
+    <a href="login.html"><img src="${contextPath}/assets/images/dl.jpg" width="180" height="60" /></a>
     <p>已有<a href="login.html">供应商</a>账号点击登录！</p>
    </div><!--regDl/-->
    <div class="regDl">
-    <a href="login.html"><img src="images/dl.jpg" width="180" height="60" /></a>
+    <a href="login.html"><img src="${contextPath}/assets/images/dl.jpg" width="180" height="60" /></a>
     <p>已有<a href="login.html">采购商</a>账号点击登录！</p>
    </div><!--regDl/-->
   </div><!--loginBuyRight/-->
@@ -129,7 +131,7 @@
  <div class="footBox">
   <div class="footers">
    <div class="footersLeft">
-    <a href="index.html"><img src="images/ftlogo.jpg" width="240" height="64" /></a>
+    <a href="index.html"><img src="${contextPath}/assets/images/ftlogo.jpg" width="240" height="64" /></a>
     <h3 class="ftphone">400 000 0000 </h3>
     <div class="ftKe">
      客服 7x24小时(全年无休)<br />

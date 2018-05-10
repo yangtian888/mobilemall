@@ -1,13 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+    <c:set var="contextPath" value="${pageContext.request.contextPath }"></c:set>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-<link type="text/css" href="css/css.css" rel="stylesheet" />
-<script type="text/javascript" src="js/js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="js/js.js"></script>
+<title>prolist</title>
+<link type="text/css" href="${contextPath}/assets/css/css.css" rel="stylesheet" />
+<script type="text/javascript" src="${contextPath}/assets/js/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="${contextPath}/assets/js/js.js"></script>
 </head>
 <body>
 <div class="hrader" id="header">
@@ -27,12 +29,12 @@
  </div><!--hrader/-->
  <div class="mid">
   <h1 class="logo" style="text-align:left;">
-  <a href="index.html"><img src="images/logo.png" width="304" height="74" /></a>
+  <a href="index.html"><img src="${contextPath}/assets/images/logo.png" width="304" height="74" /></a>
   </h1>
-  <form action="#" method="get" class="subBox">
+  <form action="${contextPath}/prolist" method="post" class="prolist">
    <div class="subBox2">
     <input type="text" class="subText" />
-    <input type="image" src="images/sub.jpg" width="95" height="32" class="subImg" />
+    <input type="image" src="${contextPath}/assets/images/sub.jpg" width="95" height="32" class="subImg" />
     <div class="hotci">
     <a href="#">酷派大神</a>
     <a href="#">三星s5</a>
@@ -44,10 +46,10 @@
   </form><!--subBox/-->
   <div class="ding-gou">
    <div class="ding">
-    <a href="order.html"><img src="images/dingdan.jpg" width="106" height="32" /></a>
+    <a href="order.html"><img src="${contextPath}/assets/images/dingdan.jpg" width="106" height="32" /></a>
    </div><!--ding/-->
    <div class="gou">
-    <a href="car.html"><img src="images/gouwuche.jpg" width="126" height="32" /></a>
+    <a href="car.html"><img src="${contextPath}/assets/images/gouwuche.jpg" width="126" height="32" /></a>
    </div><!--gou/-->
    <div class="clears"></div>
   </div><!--ding-gou/-->
@@ -65,7 +67,7 @@
   </ul><!--nav/-->
  </div><!--navBox/-->
  <form action="#" method="get" class="proDingzhi">
-  <img src="images/dingzhi.jpg" width="972" height="167" />
+  <img src="${contextPath}/assets/images/dingzhi.jpg" width="972" height="167" />
   <div class="bdsharebuttonbox">
   <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
 <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
@@ -100,7 +102,7 @@
       <span class="duoxuan">
        多选
       </span><!--duoxuan/-->
-      <input type="image" src="images/queding.png" class="queen2" />
+      <input type="image" src="${contextPath}/assets/images/queding.png" class="queen2" />
       <div class="more-shou">
        <span class="more">
         更多 &gt;
@@ -165,7 +167,7 @@
       <div class="jiage">
        <input type="text" />&nbsp;-&nbsp;
        <input type="text" />&nbsp;
-       <input type="image" src="images/queding.png" class="queen" />
+       <input type="image" src="${contextPath}/assets/images/queding.png" class="queen" />
       </div><!--jiage/-->
      </div>
     </td>
@@ -241,7 +243,7 @@
       <span class="duoxuan">
        多选
       </span><!--duoxuan/-->
-      <input type="image" src="images/queding.png" class="queen2" />
+      <input type="image" src="${contextPath}/assets/images/queding.png" class="queen2" />
      </div>
     </td>
    </tr>
@@ -262,7 +264,7 @@
          <span class="duoxuan">
            多选
          </span><!--duoxuan/-->
-         <input type="image" src="images/queding.png" class="queen2" />
+         <input type="image" src="${contextPath}/assets/images/queding.png" class="queen2" />
         </div><!--chilXBox-->
        </div><!--chilXuan/-->
       </li>
@@ -280,7 +282,7 @@
          <span class="duoxuan">
            多选
          </span><!--duoxuan/-->
-         <input type="image" src="images/queding.png" class="queen2" />
+         <input type="image" src="${contextPath}/assets/images/queding.png" class="queen2" />
         </div><!--chilXBox-->
        </div><!--chilXuan/-->
       </li>
@@ -298,7 +300,7 @@
          <span class="duoxuan">
            多选
          </span><!--duoxuan/-->
-         <input type="image" src="images/queding.png" class="queen2" />
+         <input type="image" src="${contextPath}/assets/images/queding.png" class="queen2" />
         </div><!--chilXBox-->
        </div><!--chilXuan/-->
       </li>
@@ -316,7 +318,7 @@
          <span class="duoxuan">
            多选
          </span><!--duoxuan/-->
-         <input type="image" src="images/queding.png" class="queen2" />
+         <input type="image" src="${contextPath}/assets/images/queding.png" class="queen2" />
         </div><!--chilXBox-->
        </div><!--chilXuan/-->
       </li>
@@ -334,7 +336,7 @@
          <span class="duoxuan">
            多选
          </span><!--duoxuan/-->
-         <input type="image" src="images/queding.png" class="queen2" />
+         <input type="image" src="${contextPath}/assets/images/queding.png" class="queen2" />
         </div><!--chilXBox-->
        </div><!--chilXuan/-->
       </li>
@@ -352,7 +354,7 @@
          <span class="duoxuan">
            多选
          </span><!--duoxuan/-->
-         <input type="image" src="images/queding.png" class="queen2" />
+         <input type="image" src="${contextPath}/assets/images/queding.png" class="queen2" />
         </div><!--chilXBox-->
        </div><!--chilXuan/-->
       </li>
@@ -370,7 +372,7 @@
          <span class="duoxuan">
            多选
          </span><!--duoxuan/-->
-         <input type="image" src="images/queding.png" class="queen2" />
+         <input type="image" src="${contextPath}/assets/images/queding.png" class="queen2" />
         </div><!--chilXBox-->
        </div><!--chilXuan/-->
       </li>
@@ -388,7 +390,7 @@
          <span class="duoxuan">
            多选
          </span><!--duoxuan/-->
-         <input type="image" src="images/queding.png" class="queen2" />
+         <input type="image" src="${contextPath}/assets/images/queding.png" class="queen2" />
         </div><!--chilXBox-->
        </div><!--chilXuan/-->
       </li>
@@ -406,7 +408,7 @@
          <span class="duoxuan">
            多选
          </span><!--duoxuan/-->
-         <input type="image" src="images/queding.png" class="queen2" />
+         <input type="image" src="${contextPath}/assets/images/queding.png" class="queen2" />
         </div><!--chilXBox-->
        </div><!--chilXuan/-->
       </li>
@@ -424,7 +426,7 @@
          <span class="duoxuan">
            多选
          </span><!--duoxuan/-->
-         <input type="image" src="images/queding.png" class="queen2" />
+         <input type="image" src="${contextPath}/assets/images/queding.png" class="queen2" />
         </div><!--chilXBox-->
        </div><!--chilXuan/-->
       </li>
@@ -442,7 +444,7 @@
          <span class="duoxuan">
            多选
          </span><!--duoxuan/-->
-         <input type="image" src="images/queding.png" class="queen2" />
+         <input type="image" src="${contextPath}/assets/images/queding.png" class="queen2" />
         </div><!--chilXBox-->
        </div><!--chilXuan/-->
       </li>
@@ -460,7 +462,7 @@
          <span class="duoxuan">
            多选
          </span><!--duoxuan/-->
-         <input type="image" src="images/queding.png" class="queen2" />
+         <input type="image" src="${contextPath}/assets/images/queding.png" class="queen2" />
         </div><!--chilXBox-->
        </div><!--chilXuan/-->
       </li>
@@ -479,7 +481,7 @@
   </ul><!--proSelect/-->
   <div class="phoneBox">
    <dl>
-    <dt><a href="buyinfo.html"><img src="images/phone5.png" /></a></dt>
+    <dt><a href="buyinfo.html"><img src="${contextPath}/assets/images/phone5.png" /></a></dt>
     <dd>
      <h3>￥4800.00</h3>
      <div class="phonePars">
@@ -497,7 +499,7 @@
     </dd>
    </dl>
    <dl>
-    <dt><a href="buyinfo.html"><img src="images/phone4.png" /></a></dt>
+    <dt><a href="buyinfo.html"><img src="${contextPath}/assets/images/phone4.png" /></a></dt>
     <dd>
      <h3>￥4800.00</h3>
      <div class="phonePars">
@@ -515,7 +517,277 @@
     </dd>
    </dl>
    <dl>
-    <dt><a href="buyinfo.html"><img src="images/phone3.png" /></a></dt>
+    <dt><a href="buyinfo.html"><img src="${contextPath}/assets/images/phone3.png" /></a></dt>
+    <dd>
+     <h3>￥4800.00</h3>
+     <div class="phonePars">
+      Apple 苹果 iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4G手机 金
+     </div><!--phonePar/-->
+     <div class="xiaoliang">
+      <span class="blue">157451条评价</span>
+      <span class="pad">上海有货</span>
+     </div><!--xiaoliang/-->
+     <div class="jiaru-shoucang">
+      <span class="jiaruCar">加入购物车</span>
+      <span class="shoucangCar"><a href="quanjing/index.html">选用此模型</a></span>
+      <div class="clears"></div>
+     </div><!--jiaru-shoucang/-->
+    </dd>
+   </dl>
+   <dl>
+    <dt><a href="buyinfo.html"><img src="${contextPath}/assets/images/phone2.png" /></a></dt>
+    <dd>
+     <h3>￥4800.00</h3>
+     <div class="phonePars">
+      Apple 苹果 iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4G手机 金
+     </div><!--phonePar/-->
+     <div class="xiaoliang">
+      <span class="blue">157451条评价</span>
+      <span class="pad">上海有货</span>
+     </div><!--xiaoliang/-->
+     <div class="jiaru-shoucang">
+      <span class="jiaruCar">加入购物车</span>
+      <span class="shoucangCar"><a href="quanjing/index.html">选用此模型</a></span>
+      <div class="clears"></div>
+     </div><!--jiaru-shoucang/-->
+    </dd>
+   </dl>
+   <dl>
+    <dt><a href="buyinfo.html"><img src="${contextPath}/assets/images/phone1.png" /></a></dt>
+    <dd>
+     <h3>￥4800.00</h3>
+     <div class="phonePars">
+      Apple 苹果 iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4G手机 金
+     </div><!--phonePar/-->
+     <div class="xiaoliang">
+      <span class="blue">157451条评价</span>
+      <span class="pad">上海有货</span>
+     </div><!--xiaoliang/-->
+     <div class="jiaru-shoucang">
+      <span class="jiaruCar">加入购物车</span>
+      <span class="shoucangCar"><a href="quanjing/index.html">选用此模型</a></span>
+      <div class="clears"></div>
+     </div><!--jiaru-shoucang/-->
+    </dd>
+   </dl>
+   <dl>
+    <dt><a href="buyinfo.html"><img src="${contextPath}/assets/images/phone5.png" /></a></dt>
+    <dd>
+     <h3>￥4800.00</h3>
+     <div class="phonePars">
+      Apple 苹果 iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4G手机 金
+     </div><!--phonePar/-->
+     <div class="xiaoliang">
+      <span class="blue">157451条评价</span>
+      <span class="pad">上海有货</span>
+     </div><!--xiaoliang/-->
+     <div class="jiaru-shoucang">
+      <span class="jiaruCar">加入购物车</span>
+      <span class="shoucangCar"><a href="quanjing/index.html">选用此模型</a></span>
+      <div class="clears"></div>
+     </div><!--jiaru-shoucang/-->
+    </dd>
+   </dl>
+   <dl>
+    <dt><a href="buyinfo.html"><img src="${contextPath}/assets/images/phone4.png" /></a></dt>
+    <dd>
+     <h3>￥4800.00</h3>
+     <div class="phonePars">
+      Apple 苹果 iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4G手机 金
+     </div><!--phonePar/-->
+     <div class="xiaoliang">
+      <span class="blue">157451条评价</span>
+      <span class="pad">上海有货</span>
+     </div><!--xiaoliang/-->
+     <div class="jiaru-shoucang">
+      <span class="jiaruCar">加入购物车</span>
+      <span class="shoucangCar"><a href="quanjing/index.html">选用此模型</a></span>
+      <div class="clears"></div>
+     </div><!--jiaru-shoucang/-->
+    </dd>
+   </dl>
+   <dl>
+    <dt><a href="buyinfo.html"><img src="${contextPath}/assets/images/phone3.png" /></a></dt>
+    <dd>
+     <h3>￥4800.00</h3>
+     <div class="phonePars">
+      Apple 苹果 iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4G手机 金
+     </div><!--phonePar/-->
+     <div class="xiaoliang">
+      <span class="blue">157451条评价</span>
+      <span class="pad">上海有货</span>
+     </div><!--xiaoliang/-->
+     <div class="jiaru-shoucang">
+      <span class="jiaruCar">加入购物车</span>
+      <span class="shoucangCar"><a href="quanjing/index.html">选用此模型</a></span>
+      <div class="clears"></div>
+     </div><!--jiaru-shoucang/-->
+    </dd>
+   </dl>
+   <dl>
+    <dt><a href="buyinfo.html"><img src="${contextPath}/assets/images/phone2.png" /></a></dt>
+    <dd>
+     <h3>￥4800.00</h3>
+     <div class="phonePars">
+      Apple 苹果 iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4G手机 金
+     </div><!--phonePar/-->
+     <div class="xiaoliang">
+      <span class="blue">157451条评价</span>
+      <span class="pad">上海有货</span>
+     </div><!--xiaoliang/-->
+     <div class="jiaru-shoucang">
+      <span class="jiaruCar">加入购物车</span>
+      <span class="shoucangCar"><a href="quanjing/index.html">选用此模型</a></span>
+      <div class="clears"></div>
+     </div><!--jiaru-shoucang/-->
+    </dd>
+   </dl>
+   <dl>
+    <dt><a href="buyinfo.html"><img src="${contextPath}/assets/images/phone1.png" /></a></dt>
+    <dd>
+     <h3>￥4800.00</h3>
+     <div class="phonePars">
+      Apple 苹果 iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4G手机 金
+     </div><!--phonePar/-->
+     <div class="xiaoliang">
+      <span class="blue">157451条评价</span>
+      <span class="pad">上海有货</span>
+     </div><!--xiaoliang/-->
+     <div class="jiaru-shoucang">
+      <span class="jiaruCar">加入购物车</span>
+      <span class="shoucangCar"><a href="quanjing/index.html">选用此模型</a></span>
+      <div class="clears"></div>
+     </div><!--jiaru-shoucang/-->
+    </dd>
+   </dl>
+   <dl>
+    <dt><a href="buyinfo.html"><img src="${contextPath}/assets/images/phone5.png" /></a></dt>
+    <dd>
+     <h3>￥4800.00</h3>
+     <div class="phonePars">
+      Apple 苹果 iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4G手机 金
+     </div><!--phonePar/-->
+     <div class="xiaoliang">
+      <span class="blue">157451条评价</span>
+      <span class="pad">上海有货</span>
+     </div><!--xiaoliang/-->
+     <div class="jiaru-shoucang">
+      <span class="jiaruCar">加入购物车</span>
+      <span class="shoucangCar"><a href="quanjing/index.html">选用此模型</a></span>
+      <div class="clears"></div>
+     </div><!--jiaru-shoucang/-->
+    </dd>
+   </dl>
+   <dl>
+    <dt><a href="buyinfo.html"><img src="${contextPath}/assets/images/phone4.png" /></a></dt>
+    <dd>
+     <h3>￥4800.00</h3>
+     <div class="phonePars">
+      Apple 苹果 iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4G手机 金
+     </div><!--phonePar/-->
+     <div class="xiaoliang">
+      <span class="blue">157451条评价</span>
+      <span class="pad">上海有货</span>
+     </div><!--xiaoliang/-->
+     <div class="jiaru-shoucang">
+      <span class="jiaruCar">加入购物车</span>
+      <span class="shoucangCar"><a href="quanjing/index.html">选用此模型</a></span>
+      <div class="clears"></div>
+     </div><!--jiaru-shoucang/-->
+    </dd>
+   </dl>
+   <dl>
+    <dt><a href="buyinfo.html"><img src="${contextPath}/assets/images/phone3.png" /></a></dt>
+    <dd>
+     <h3>￥4800.00</h3>
+     <div class="phonePars">
+      Apple 苹果 iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4G手机 金
+     </div><!--phonePar/-->
+     <div class="xiaoliang">
+      <span class="blue">157451条评价</span>
+      <span class="pad">上海有货</span>
+     </div><!--xiaoliang/-->
+     <div class="jiaru-shoucang">
+      <span class="jiaruCar">加入购物车</span>
+      <span class="shoucangCar"><a href="quanjing/index.html">选用此模型</a></span>
+      <div class="clears"></div>
+     </div><!--jiaru-shoucang/-->
+    </dd>
+   </dl>
+   <dl>
+    <dt><a href="buyinfo.html"><img src="${contextPath}/assets/images/phone2.png" /></a></dt>
+    <dd>
+     <h3>￥4800.00</h3>
+     <div class="phonePars">
+      Apple 苹果 iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4G手机 金
+     </div><!--phonePar/-->
+     <div class="xiaoliang">
+      <span class="blue">157451条评价</span>
+      <span class="pad">上海有货</span>
+     </div><!--xiaoliang/-->
+     <div class="jiaru-shoucang">
+      <span class="jiaruCar">加入购物车</span>
+      <span class="shoucangCar"><a href="quanjing/index.html">选用此模型</a></span>
+      <div class="clears"></div>
+     </div><!--jiaru-shoucang/-->
+    </dd>
+   </dl>
+   <dl>
+    <dt><a href="buyinfo.html"><img src="${contextPath}/assets/images/phone1.png" /></a></dt>
+    <dd>
+     <h3>￥4800.00</h3>
+     <div class="phonePars">
+      Apple 苹果 iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4G手机 金
+     </div><!--phonePar/-->
+     <div class="xiaoliang">
+      <span class="blue">157451条评价</span>
+      <span class="pad">上海有货</span>
+     </div><!--xiaoliang/-->
+     <div class="jiaru-shoucang">
+      <span class="jiaruCar">加入购物车</span>
+      <span class="shoucangCar"><a href="quanjing/index.html">选用此模型</a></span>
+      <div class="clears"></div>
+     </div><!--jiaru-shoucang/-->
+    </dd>
+   </dl>
+   <dl>
+    <dt><a href="buyinfo.html"><img src="${contextPath}/assets/images/phone5.png" /></a></dt>
+    <dd>
+     <h3>￥4800.00</h3>
+     <div class="phonePars">
+      Apple 苹果 iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4G手机 金
+     </div><!--phonePar/-->
+     <div class="xiaoliang">
+      <span class="blue">157451条评价</span>
+      <span class="pad">上海有货</span>
+     </div><!--xiaoliang/-->
+     <div class="jiaru-shoucang">
+      <span class="jiaruCar">加入购物车</span>
+      <span class="shoucangCar"><a href="quanjing/index.html">选用此模型</a></span>
+      <div class="clears"></div>
+     </div><!--jiaru-shoucang/-->
+    </dd>
+   </dl>
+   <dl>
+    <dt><a href="buyinfo.html"><img src="${contextPath}/assets/images/phone4.png" /></a></dt>
+    <dd>
+     <h3>￥4800.00</h3>
+     <div class="phonePars">
+      Apple 苹果 iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4G手机 金
+     </div><!--phonePar/-->
+     <div class="xiaoliang">
+      <span class="blue">157451条评价</span>
+      <span class="pad">上海有货</span>
+     </div><!--xiaoliang/-->
+     <div class="jiaru-shoucang">
+      <span class="jiaruCar">加入购物车</span>
+      <span class="shoucangCar"><a href="quanjing/index.html">选用此模型</a></span>
+      <div class="clears"></div>
+     </div><!--jiaru-shoucang/-->
+    </dd>
+   </dl>
+   <dl>
+    <dt><a href="buyinfo.html"><img src="${contextPath}/assets/images/phone3.png" /></a></dt>
     <dd>
      <h3>￥4800.00</h3>
      <div class="phonePars">
@@ -551,277 +823,7 @@
     </dd>
    </dl>
    <dl>
-    <dt><a href="buyinfo.html"><img src="images/phone1.png" /></a></dt>
-    <dd>
-     <h3>￥4800.00</h3>
-     <div class="phonePars">
-      Apple 苹果 iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4G手机 金
-     </div><!--phonePar/-->
-     <div class="xiaoliang">
-      <span class="blue">157451条评价</span>
-      <span class="pad">上海有货</span>
-     </div><!--xiaoliang/-->
-     <div class="jiaru-shoucang">
-      <span class="jiaruCar">加入购物车</span>
-      <span class="shoucangCar"><a href="quanjing/index.html">选用此模型</a></span>
-      <div class="clears"></div>
-     </div><!--jiaru-shoucang/-->
-    </dd>
-   </dl>
-   <dl>
-    <dt><a href="buyinfo.html"><img src="images/phone5.png" /></a></dt>
-    <dd>
-     <h3>￥4800.00</h3>
-     <div class="phonePars">
-      Apple 苹果 iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4G手机 金
-     </div><!--phonePar/-->
-     <div class="xiaoliang">
-      <span class="blue">157451条评价</span>
-      <span class="pad">上海有货</span>
-     </div><!--xiaoliang/-->
-     <div class="jiaru-shoucang">
-      <span class="jiaruCar">加入购物车</span>
-      <span class="shoucangCar"><a href="quanjing/index.html">选用此模型</a></span>
-      <div class="clears"></div>
-     </div><!--jiaru-shoucang/-->
-    </dd>
-   </dl>
-   <dl>
-    <dt><a href="buyinfo.html"><img src="images/phone4.png" /></a></dt>
-    <dd>
-     <h3>￥4800.00</h3>
-     <div class="phonePars">
-      Apple 苹果 iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4G手机 金
-     </div><!--phonePar/-->
-     <div class="xiaoliang">
-      <span class="blue">157451条评价</span>
-      <span class="pad">上海有货</span>
-     </div><!--xiaoliang/-->
-     <div class="jiaru-shoucang">
-      <span class="jiaruCar">加入购物车</span>
-      <span class="shoucangCar"><a href="quanjing/index.html">选用此模型</a></span>
-      <div class="clears"></div>
-     </div><!--jiaru-shoucang/-->
-    </dd>
-   </dl>
-   <dl>
-    <dt><a href="buyinfo.html"><img src="images/phone3.png" /></a></dt>
-    <dd>
-     <h3>￥4800.00</h3>
-     <div class="phonePars">
-      Apple 苹果 iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4G手机 金
-     </div><!--phonePar/-->
-     <div class="xiaoliang">
-      <span class="blue">157451条评价</span>
-      <span class="pad">上海有货</span>
-     </div><!--xiaoliang/-->
-     <div class="jiaru-shoucang">
-      <span class="jiaruCar">加入购物车</span>
-      <span class="shoucangCar"><a href="quanjing/index.html">选用此模型</a></span>
-      <div class="clears"></div>
-     </div><!--jiaru-shoucang/-->
-    </dd>
-   </dl>
-   <dl>
-    <dt><a href="buyinfo.html"><img src="images/phone2.png" /></a></dt>
-    <dd>
-     <h3>￥4800.00</h3>
-     <div class="phonePars">
-      Apple 苹果 iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4G手机 金
-     </div><!--phonePar/-->
-     <div class="xiaoliang">
-      <span class="blue">157451条评价</span>
-      <span class="pad">上海有货</span>
-     </div><!--xiaoliang/-->
-     <div class="jiaru-shoucang">
-      <span class="jiaruCar">加入购物车</span>
-      <span class="shoucangCar"><a href="quanjing/index.html">选用此模型</a></span>
-      <div class="clears"></div>
-     </div><!--jiaru-shoucang/-->
-    </dd>
-   </dl>
-   <dl>
-    <dt><a href="buyinfo.html"><img src="images/phone1.png" /></a></dt>
-    <dd>
-     <h3>￥4800.00</h3>
-     <div class="phonePars">
-      Apple 苹果 iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4G手机 金
-     </div><!--phonePar/-->
-     <div class="xiaoliang">
-      <span class="blue">157451条评价</span>
-      <span class="pad">上海有货</span>
-     </div><!--xiaoliang/-->
-     <div class="jiaru-shoucang">
-      <span class="jiaruCar">加入购物车</span>
-      <span class="shoucangCar"><a href="quanjing/index.html">选用此模型</a></span>
-      <div class="clears"></div>
-     </div><!--jiaru-shoucang/-->
-    </dd>
-   </dl>
-   <dl>
-    <dt><a href="buyinfo.html"><img src="images/phone5.png" /></a></dt>
-    <dd>
-     <h3>￥4800.00</h3>
-     <div class="phonePars">
-      Apple 苹果 iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4G手机 金
-     </div><!--phonePar/-->
-     <div class="xiaoliang">
-      <span class="blue">157451条评价</span>
-      <span class="pad">上海有货</span>
-     </div><!--xiaoliang/-->
-     <div class="jiaru-shoucang">
-      <span class="jiaruCar">加入购物车</span>
-      <span class="shoucangCar"><a href="quanjing/index.html">选用此模型</a></span>
-      <div class="clears"></div>
-     </div><!--jiaru-shoucang/-->
-    </dd>
-   </dl>
-   <dl>
-    <dt><a href="buyinfo.html"><img src="images/phone4.png" /></a></dt>
-    <dd>
-     <h3>￥4800.00</h3>
-     <div class="phonePars">
-      Apple 苹果 iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4G手机 金
-     </div><!--phonePar/-->
-     <div class="xiaoliang">
-      <span class="blue">157451条评价</span>
-      <span class="pad">上海有货</span>
-     </div><!--xiaoliang/-->
-     <div class="jiaru-shoucang">
-      <span class="jiaruCar">加入购物车</span>
-      <span class="shoucangCar"><a href="quanjing/index.html">选用此模型</a></span>
-      <div class="clears"></div>
-     </div><!--jiaru-shoucang/-->
-    </dd>
-   </dl>
-   <dl>
-    <dt><a href="buyinfo.html"><img src="images/phone3.png" /></a></dt>
-    <dd>
-     <h3>￥4800.00</h3>
-     <div class="phonePars">
-      Apple 苹果 iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4G手机 金
-     </div><!--phonePar/-->
-     <div class="xiaoliang">
-      <span class="blue">157451条评价</span>
-      <span class="pad">上海有货</span>
-     </div><!--xiaoliang/-->
-     <div class="jiaru-shoucang">
-      <span class="jiaruCar">加入购物车</span>
-      <span class="shoucangCar"><a href="quanjing/index.html">选用此模型</a></span>
-      <div class="clears"></div>
-     </div><!--jiaru-shoucang/-->
-    </dd>
-   </dl>
-   <dl>
-    <dt><a href="buyinfo.html"><img src="images/phone2.png" /></a></dt>
-    <dd>
-     <h3>￥4800.00</h3>
-     <div class="phonePars">
-      Apple 苹果 iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4G手机 金
-     </div><!--phonePar/-->
-     <div class="xiaoliang">
-      <span class="blue">157451条评价</span>
-      <span class="pad">上海有货</span>
-     </div><!--xiaoliang/-->
-     <div class="jiaru-shoucang">
-      <span class="jiaruCar">加入购物车</span>
-      <span class="shoucangCar"><a href="quanjing/index.html">选用此模型</a></span>
-      <div class="clears"></div>
-     </div><!--jiaru-shoucang/-->
-    </dd>
-   </dl>
-   <dl>
-    <dt><a href="buyinfo.html"><img src="images/phone1.png" /></a></dt>
-    <dd>
-     <h3>￥4800.00</h3>
-     <div class="phonePars">
-      Apple 苹果 iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4G手机 金
-     </div><!--phonePar/-->
-     <div class="xiaoliang">
-      <span class="blue">157451条评价</span>
-      <span class="pad">上海有货</span>
-     </div><!--xiaoliang/-->
-     <div class="jiaru-shoucang">
-      <span class="jiaruCar">加入购物车</span>
-      <span class="shoucangCar"><a href="quanjing/index.html">选用此模型</a></span>
-      <div class="clears"></div>
-     </div><!--jiaru-shoucang/-->
-    </dd>
-   </dl>
-   <dl>
-    <dt><a href="buyinfo.html"><img src="images/phone5.png" /></a></dt>
-    <dd>
-     <h3>￥4800.00</h3>
-     <div class="phonePars">
-      Apple 苹果 iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4G手机 金
-     </div><!--phonePar/-->
-     <div class="xiaoliang">
-      <span class="blue">157451条评价</span>
-      <span class="pad">上海有货</span>
-     </div><!--xiaoliang/-->
-     <div class="jiaru-shoucang">
-      <span class="jiaruCar">加入购物车</span>
-      <span class="shoucangCar"><a href="quanjing/index.html">选用此模型</a></span>
-      <div class="clears"></div>
-     </div><!--jiaru-shoucang/-->
-    </dd>
-   </dl>
-   <dl>
-    <dt><a href="buyinfo.html"><img src="images/phone4.png" /></a></dt>
-    <dd>
-     <h3>￥4800.00</h3>
-     <div class="phonePars">
-      Apple 苹果 iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4G手机 金
-     </div><!--phonePar/-->
-     <div class="xiaoliang">
-      <span class="blue">157451条评价</span>
-      <span class="pad">上海有货</span>
-     </div><!--xiaoliang/-->
-     <div class="jiaru-shoucang">
-      <span class="jiaruCar">加入购物车</span>
-      <span class="shoucangCar"><a href="quanjing/index.html">选用此模型</a></span>
-      <div class="clears"></div>
-     </div><!--jiaru-shoucang/-->
-    </dd>
-   </dl>
-   <dl>
-    <dt><a href="buyinfo.html"><img src="images/phone3.png" /></a></dt>
-    <dd>
-     <h3>￥4800.00</h3>
-     <div class="phonePars">
-      Apple 苹果 iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4G手机 金
-     </div><!--phonePar/-->
-     <div class="xiaoliang">
-      <span class="blue">157451条评价</span>
-      <span class="pad">上海有货</span>
-     </div><!--xiaoliang/-->
-     <div class="jiaru-shoucang">
-      <span class="jiaruCar">加入购物车</span>
-      <span class="shoucangCar"><a href="quanjing/index.html">选用此模型</a></span>
-      <div class="clears"></div>
-     </div><!--jiaru-shoucang/-->
-    </dd>
-   </dl>
-   <dl>
-    <dt><a href="buyinfo.html"><img src="images/phone2.png" /></a></dt>
-    <dd>
-     <h3>￥4800.00</h3>
-     <div class="phonePars">
-      Apple 苹果 iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4G手机 金
-     </div><!--phonePar/-->
-     <div class="xiaoliang">
-      <span class="blue">157451条评价</span>
-      <span class="pad">上海有货</span>
-     </div><!--xiaoliang/-->
-     <div class="jiaru-shoucang">
-      <span class="jiaruCar">加入购物车</span>
-      <span class="shoucangCar"><a href="quanjing/index.html">选用此模型</a></span>
-      <div class="clears"></div>
-     </div><!--jiaru-shoucang/-->
-    </dd>
-   </dl>
-   <dl>
-    <dt><a href="buyinfo.html"><img src="images/phone1.png" /></a></dt>
+    <dt><a href="buyinfo.html"><img src="${contextPath}/assets/images/phone1.png" /></a></dt>
     <dd>
      <h3>￥4800.00</h3>
      <div class="phonePars">
@@ -844,7 +846,7 @@
  <div class="footBox">
   <div class="footers">
    <div class="footersLeft">
-    <a href="index.html"><img src="images/ftlogo.jpg" width="240" height="64" /></a>
+    <a href="index.html"><img src="${contextPath}/assets/images/ftlogo.jpg" width="240" height="64" /></a>
     <h3 class="ftphone">400 000 0000 </h3>
     <div class="ftKe">
      客服 7x24小时(全年无休)<br />
