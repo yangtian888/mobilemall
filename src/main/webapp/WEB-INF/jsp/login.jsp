@@ -38,7 +38,7 @@
    </div><!--loginLeft/-->
    <div class="loginRight">
    
-    <form class="login" action="${contextPath}/prolist" method="get">
+    <form action="" method="post" class="login" >
     
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
      <label>邮箱/用户名/已验证手机</label>

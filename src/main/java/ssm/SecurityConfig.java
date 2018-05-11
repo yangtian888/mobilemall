@@ -18,12 +18,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		// Fluent API
 		http.authorizeRequests()
 			.antMatchers("/admin/**").access("isFullyAuthenticated() and hasRole('ADMIN')")
-			.antMatchers("/assets/**", "/login").permitAll()
+			.antMatchers("/assets/**", "/login","/regist").permitAll()
 			.antMatchers("/regist").anonymous()
 			.antMatchers("/**").authenticated()
 			.and()
 			.formLogin() // 使用表单登录
 			.loginPage("/login") // 指定登录页面所在的地址
+			.defaultSuccessUrl("/prolist")
 			.and()
 
 //			.rememberMe() // 记住我配置

@@ -22,12 +22,16 @@ public class UserController {
    public String reg(){
 	   return  "reg" ;
    }
-   @RequestMapping(method=RequestMethod.POST,value="regist")
+   @RequestMapping(method=RequestMethod.POST,value="/regist")
    public String regist(@ModelAttribute User user){
 	   userService.regist(user);
 	   System.err.println(user);
 	   return "redirect:/login" ;
    }
+   @RequestMapping(method=RequestMethod.GET,value="/prolist")
+   public String prolist( ){ 
+	     return "prolist" ;
+   }  
 }   
     
 	  

@@ -5,7 +5,7 @@ import javax.validation.constraints.Size;
 public class User {
 /*create table shop_user(
 			id number(16) primary key,
-			username varchar(64),
+			username varchar(64) ,
 			password varchar(64),
 			e_mail varchar(64),
 			phone varchar(16)

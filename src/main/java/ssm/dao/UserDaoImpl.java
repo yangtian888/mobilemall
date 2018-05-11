@@ -18,6 +18,7 @@ public class UserDaoImpl implements UserDao {
     
 	@Override
 	public User finOneUsername(String username) {
+		System.err.println(userMapper.findOneUsername(username));
 		return userMapper.findOneUsername(username);
 	}
 	@Override
