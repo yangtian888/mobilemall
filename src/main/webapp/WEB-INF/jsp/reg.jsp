@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>  
     <c:set var="contextPath" value="${pageContext.request.contextPath}"></c:set>  
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>reg</title>
@@ -13,8 +13,8 @@
 </head>
 <body>
 <div class="hrader" id="header">
-  <a href="login.jsp" style="color:#FD7306;margin-left:20px;">请登录</a> 
-  <a href="reg.jsp">注册</a>
+  <a href="${contextPath}/login" style="color:#FD7306;margin-left:20px;">请登录</a> 
+  <a href="${contextPath}/regist">注册</a>
   <div class="topNav">
    <a href="index.jsp" style="color:#FD7306;">首页</a>
    <a href="buy.jsp">买家</a>
@@ -39,26 +39,30 @@
     <li class="regEqBg2">采购商</li>
     <div class="clears"></div>
    </ul><!--regEq/-->
-   <form action="${contextPath}/reg" method="post" class="reg">
+   
+   <form action="" method="post" class="regForm">
+   
+   <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+   
     <div class="loginBuyList">
      <label for="username">用户名：</label>
-     <input type="text" id="username" />
+     <input type="text" id="name" name="username"/>
     </div><!--loginBuyList/-->
     <div class="loginBuyList">
      <label for="email">邮箱：</label>
-     <input type="text" id="email" />
+     <input type="text" id="email" name="eMail"/>
     </div><!--loginBuyList/-->
     <div class="loginBuyList">
      <label for="tel">手机号码：</label>
-     <input type="text" id="tel" />
+     <input type="text" id="tel" name="phone" />
     </div><!--loginBuyList/-->
     <div class="loginBuyList">
      <label for="password">设置密码：</label>
-     <input type="text" id="password" />
+     <input type="password" id="pwd" name="password"/>
     </div><!--loginBuyList/-->
     <div class="loginBuyList" style="border:#DEDEDE 1px solid;">
      <label for="pwd1">确认密码：</label>
-     <input type="text" id="pwd1" />
+     <input type="password" id="pwd1" name="password1"/>
     </div><!--loginBuyList/-->
     
     <div class="loginBuyyan">
@@ -73,30 +77,31 @@
      <input type="checkbox" /> <span>我已阅读并同意<a href="xieyi.jsp" target="_blank">《uniqueZi协议》</a></span>
     </div><!--falv/-->
     <div class="regSubs">
-     <input type="button" value=" 注 册 " />
-    </div><!--regSub/-->
+     <input type="submit" value=" 注 册 " />
+    </div><!--regSub/--> 
    </form><!--/-->
    
-   <form action="#" method="get" class="regForm">
+   <form action="login.jsp" method="POST" class="regForm">
+   
     <div class="loginBuyList">
      <label for="name">用户名：</label>
-     <input type="text" id="name" />
+     <input type="text" id="name" name="username"/>
     </div><!--loginBuyList/-->
     <div class="loginBuyList">
      <label for="email">邮箱：</label>
-     <input type="text" id="email" />
+     <input type="text" id="email" name="eMall"/>
     </div><!--loginBuyList/-->
     <div class="loginBuyList">
      <label for="tel">手机号码：</label>
-     <input type="text" id="tel" />
+     <input type="text" id="tel" name="phone"/>
     </div><!--loginBuyList/-->
     <div class="loginBuyList">
      <label for="pwd">设置密码：</label>
-     <input type="text" id="pwd" />
+     <input type="password" id="pwd" name="password"/>
     </div><!--loginBuyList/-->
     <div class="loginBuyList" style="border:#DEDEDE 1px solid;">
      <label for="pwd1">确认密码：</label>
-     <input type="text" id="pwd1" />
+     <input type="password" id="pwd1" name="password1"/>
     </div><!--loginBuyList/-->
     
     <div class="loginBuyyan">
@@ -111,18 +116,19 @@
      <input type="checkbox" /> <span>我已阅读并同意<a href="xieyi.jsp" target="_blank">《uniqueZi协议》</a></span>
     </div><!--falv/-->
     <div class="regSubs">
-     <input type="button" value=" 注 册 " />
+     <input type="submit" value=" 注 册 " />
     </div><!--regSub/-->
    </form><!--/-->
+   
   </div><!--loginBuyLeft-->
   <div class="loginBuyRight">
    <div class="regDl">
-    <a href="login.jsp"><img src="${contextPath}/assets/images/dl.jpg" width="180" height="60" /></a>
-    <p>已有<a href="login.jsp">供应商</a>账号点击登录！</p>
+    <a href="${contextPath}/login"><img src="${contextPath}/assets/images/dl.jpg" width="180" height="60" /></a>
+    <p>已有<a href="${contextPath}/login">供应商</a>账号点击登录！</p>
    </div><!--regDl/-->
    <div class="regDl">
-    <a href="login.jsp"><img src="${contextPath}/assets/images/dl.jpg" width="180" height="60" /></a>
-    <p>已有<a href="login.jsp">采购商</a>账号点击登录！</p>
+    <a href="${contextPath}/login"><img src="${contextPath}/assets/images/dl.jpg" width="180" height="60" /></a>
+    <p>已有<a href="${contextPath}/login">采购商</a>账号点击登录！</p>
    </div><!--regDl/-->
   </div><!--loginBuyRight/-->
   <div class="clears"></div>

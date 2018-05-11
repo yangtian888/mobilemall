@@ -4,7 +4,13 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
 <mapper namespace="ssm.dao.mapper.UserMapper">
-  <select id="findOneByUsername" resultType="User">
-	select * from users where username = #{username}
+  <select id="regist" >
+	insert into mall_user(id,username,password,e_mail,phone)
+		values(seq_mall_use.nextval,#{username},#{password},#{eMail},#{phone})
+  </select>
+  <select id="findOneUsername" resultType="ssm.entity.User">
+		select id,username,password,e_mail,phone 
+		from mall_user
+		where username = #{username}
   </select>
 </mapper>

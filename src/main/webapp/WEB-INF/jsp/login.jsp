@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
     <c:set var="contextPath" value="${pageContext.request.contextPath }"></c:set>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>login</title>
@@ -13,8 +13,8 @@
 </head>
 <body>
 <div class="hrader" id="header">
-  <a href="login.jsp" style="color:#FD7306;margin-left:20px;">请登录</a> 
-  <a href="reg">注册</a>
+  <a href="${contextPath}/login" style="color:#FD7306;margin-left:20px;">请登录</a> 
+  <a href="${contextPath}/regist">注册</a>
   <div class="topNav">
    <a href="index.jsp" style="color:#FD7306;">首页</a>
    <a href="buy.jsp">买家</a>
@@ -37,7 +37,9 @@
     <img src="${contextPath}/assets/images/login.jpg" width="567" height="348" />
    </div><!--loginLeft/-->
    <div class="loginRight">
-    <form class="login" action="${contextPath}/login" method="post">
+   
+    <form class="login" action="${contextPath}/prolist" method="get">
+    
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
      <label>邮箱/用户名/已验证手机</label>
      <input type="text" class="loginName" name ="username"/>
@@ -52,6 +54,7 @@
      <h2>合作伙伴登录：</h2>
      <img src="${contextPath}/assets/images/hezuo.jpg" width="260" height="30" />
     </form><!--login/-->
+    
    </div><!--loginRight/-->
    <div class="clears"></div>
   </div><!--loginBox/-->

@@ -13,6 +13,8 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.multipart.MultipartResolver;
@@ -42,7 +44,6 @@ public class AppConfig extends WebMvcConfigurerAdapter {
 		String username = env.getProperty("jdbc.username");
 		String password = env.getProperty("jdbc.password");
 		String driverClass = env.getProperty("jdbc.driver");
-		
 		DriverManagerDataSource ds = new DriverManagerDataSource(url, username, password);
 		ds.setDriverClassName(driverClass);
 		return ds;
@@ -75,4 +76,8 @@ public class AppConfig extends WebMvcConfigurerAdapter {
 	public PlatformTransactionManager transactionManager(DataSource dataSource) {
 		return new DataSourceTransactionManager(dataSource);
 	}
+	@Bean
+		public PasswordEncoder passwordEncoder(){
+			return new BCryptPasswordEncoder();
+		}
 }

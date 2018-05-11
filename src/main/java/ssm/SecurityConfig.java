@@ -19,6 +19,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		http.authorizeRequests()
 			.antMatchers("/admin/**").access("isFullyAuthenticated() and hasRole('ADMIN')")
 			.antMatchers("/assets/**", "/login").permitAll()
+			.antMatchers("/regist").anonymous()
 			.antMatchers("/**").authenticated()
 			.and()
 			.formLogin() // 使用表单登录
