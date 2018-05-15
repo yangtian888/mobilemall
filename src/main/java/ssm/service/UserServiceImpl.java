@@ -17,10 +17,6 @@ import ssm.entity.User;
 public class UserServiceImpl implements UserService,UserDetailsService{
     @Autowired
 	private UserDao userDao;
-    
-	public UserServiceImpl(UserDao userDao) {
-		this.userDao = userDao;
-	}
 
 	@Override
 	public void regist(User user) {
@@ -41,7 +37,15 @@ public class UserServiceImpl implements UserService,UserDetailsService{
 	    	
 	    	return userDetailsImpl;
 	}
-	
+	@Override
+	public void updateEmail(User curUser) {
+		userDao.updateEmail(curUser);		
+	}
+
+	@Override
+	public void updatePassword(User curUser, String userpassword) {
+		userDao.updatePassword(curUser,userpassword);
+	}
     
 }
 

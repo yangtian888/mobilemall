@@ -18,13 +18,23 @@ public class UserDaoImpl implements UserDao {
     
 	@Override
 	public User finOneUsername(String username) {
-		System.err.println(userMapper.findOneUsername(username));
+		
 		return userMapper.findOneUsername(username);
 	}
 	@Override
 	public void regist(User user) {
 		user.setPassword(passwordEncoder.encode(user.getPassword()));
 		userMapper.regist(user);
+	}
+	@Override
+	public void updateEmail(User curUser) {
+		userMapper.updateEmail(curUser);
+		
+	}
+	@Override
+	public void updatePassword(User curUser, String userpassword) {
+		curUser.setPassword(passwordEncoder.encode(userpassword));
+		userMapper.updatePassword(curUser);
 	}
 
 	

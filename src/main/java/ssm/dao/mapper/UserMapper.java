@@ -8,6 +8,10 @@ public interface UserMapper {
 
 	void regist(User user);
 
+	void updateEmail(User curUser);
+
+	void updatePassword(User curUser);
+
 	
 
 }
